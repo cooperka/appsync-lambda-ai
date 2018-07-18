@@ -5,7 +5,7 @@ const translate = new AWS.Translate();
 const polly = new AWS.Polly();
 const s3 = new AWS.S3({
   params: {
-    Bucket: 'YOURBUCKETNAME',
+    Bucket: 'aws-loft-ai-demo',
   }
 })
 

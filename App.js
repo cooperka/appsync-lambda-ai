@@ -43,7 +43,7 @@ export default class App extends Component {
       this.setState({ loading: true })
       const translation = await API.graphql(graphqlOperation(query, { sentence: this.state.sentence, code: code }))
       const { sentence } = translation.data.getTranslatedSentence
-      const mp3Url = `https://s3.amazonaws.com/YOURBUCKETNAME/${sentence}`
+      const mp3Url = `https://s3.amazonaws.com/aws-loft-ai-demo/${sentence}`
       this.setState({ mp3Url, loading: false })
     } catch (error) {
       console.log('error translating : ', error)
